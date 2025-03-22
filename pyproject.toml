@@ -1,0 +1,27 @@
+[project]
+name = "Dee"
+version = "0.12"
+description = "Dee, makes Python relational"
+authors = [{ name = "Greg Gaughan", email = "greg@quicksort.co.uk" }]
+license = { file = "Licence.txt" }
+readme = "README.txt"
+requires-python = ">=3.12"
+dependencies = [
+    "web.py==0.40",
+    #"Cheetah==2.4.4",
+    "DBUtils==0.9.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["2to3"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+# [tool.hatch.build.targets.wheel]
+# packages = ["src/dee2"]

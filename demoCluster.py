@@ -1,21 +1,27 @@
 """Demo Cluster"""
+
+from typing import Any
 from DeeCluster import Cluster
 
-from date import *
-from darwen import *
+from darwen import darwen_Database
+from date import date
+from darwen import darwen
+from date import date_Database
+
 
 class demo_Cluster(Cluster):
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         """Define initial databases
-           (Called once on cluster creation)"""
-        Cluster.__init__(self, name)
+        (Called once on cluster creation)"""
+        super().__init__(name)
 
-        self.date = date
-        self.darwen = darwen
+        self.date: Any | date_Database = date
+        self.darwen: Any | darwen_Database = darwen
 
-#Create the cluster
+
+# Create the cluster
 demoCluster = demo_Cluster("demo")
 
 ###################################
-if __name__=="__main__":
-    print demoCluster.databases
+if __name__ == "__main__":
+    print((demoCluster.databases))

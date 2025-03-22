@@ -1,0 +1,17 @@
+/*
+
+# files
+!.gitignore
+!.python-version
+!*.lock
+!*.py
+!License.txt
+!PKG-INFO
+!pyproject.toml
+!README.txt
+
+# folders
+!docs/
+
+__pycache__
+*.egg-info

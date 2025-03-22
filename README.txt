@@ -4,22 +4,23 @@ http://www.quicksort.co.uk
 
 See DeeDoc.html for the user guide.
 
-
 Installation
 ============
+
 Run the setup.py program with the install option, e.g.
 
     python setup.py install
-    
-This makes the standard Dee modules available to your Python programs.
 
+This makes the standard Dee modules available to your Python programs.
 
 Quick start
 ===========
+
 Dee can be used straight from the Python shell, or via a local web server and client.
 
 Local Web Server
 ----------------
+
 Run the demo web server. To start the server and a client run:
 
     python DeeWebDemo.py
@@ -28,6 +29,7 @@ The default browser should launch, pointing at http://localhost:8080, and a text
 
 Python
 ------
+
 From within the Python interpreter or from a Python program, first import the module:
 
     >>> from Dee import *
@@ -47,12 +49,11 @@ Then you can create sample relations, e.g.
     | 3 | 4 |
     +---+---+
 
-
 Or you can import the sample cluster and show its databases:
 
     >>> from demoCluster import *
 
-    >>> print demoCluster.databases
+    >>> print(demoCluster.databases)
     +---------------+
     | database_name |
     +===============+
@@ -62,7 +63,7 @@ Or you can import the sample cluster and show its databases:
 
 Display a database catalog:
 
-    >>> print demoCluster.date.relations
+    >>> print(demoCluster.date.relations)
     +-----------------------+
     | relation_name         |
     +=======================+
@@ -77,7 +78,7 @@ Display a database catalog:
 
 Perform a natural join:
 
-    >>> print demoCluster.date.S & demoCluster.date.SP
+    >>> print(demoCluster.date.S & demoCluster.date.SP)
     +--------+--------+-------+----+----+-----+
     | STATUS | CITY   | SNAME | P# | S# | QTY |
     +========+========+=======+====+====+=====+
